@@ -1,0 +1,6 @@
+BEGIN
+ Input
+   A:Tiền USD
+ B= A*23000
+ Display B
+END
