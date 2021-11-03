@@ -2,9 +2,282 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>[Bài tập] Tạo bảng nâng cao - Lịch</title>
+    <link rel="stylesheet" href="tablelich.css">
+    <style>body
+    {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+    }
+
+    h3
+    {
+        text-align: center;
+    }
+
+    p
+    {
+        text-align: center;
+        margin: 5px;
+    }
+
+    table
+    {
+        border-collapse: collapse;
+    }
+
+    tr td
+    {
+        border: 2px inset grey;
+    }
+
+    td
+    {
+        width: 100px;
+        height: 50px;
+    }
+
+    .red
+    {
+        color: red;
+    }
+
+    .red-back
+    {
+        background: red;
+    }
+
+    .blue
+    {
+        color: blue;
+    }
+
+    .blue-back
+    {
+        background: blue;
+    }
+
+    .orange-back
+    {
+        background: orange;
+    }
+
+    .black
+    {
+        color: black;
+    }
+
+    .day-1 tr td
+    {
+        border: 2px solid white;
+    }
+
+    .day-1 td
+    {
+        width: 100px;
+        height: 50px;
+    }
+
+    .row
+    {
+        color: white;
+        font-weight: bold;
+    }
+
+    label
+    {
+        margin: 0;
+        padding: 0;
+        font-size: small;
+    }
+
+    .day-2 td
+    {
+        width: 100px;
+        height: 50px;
+    }
+
+    .left
+    {
+        text-align: left;
+        font-size: 10px;
+    }
+
+    .right
+    {
+        text-align: right;
+    }</style>
 </head>
 <body>
-$END$
+<div>
+    <table class="day-1">
+        <tr>
+            <td colspan="7">
+                <h3 class="blue">
+                    Tháng 10 - October
+                </h3>
+            </td>
+        </tr>
+        <tr class="row">
+            <td class="red-back">
+                <p>C.Nhật</p>
+            </td>
+            <td class="orange-back">
+                <p>T.Hai</p>
+            </td>
+            <td class="orange-back">
+                <p>T.Ba</p>
+            </td>
+            <td class="orange-back">
+                <p>T.Tư</p>
+            </td>
+            <td class="orange-back">
+                <p>T.Năm</p>
+            </td>
+            <td class="orange-back">
+                <p>T.Sáu</p>
+            </td>
+            <td class="blue-back">
+                <p>T.Bảy</p>
+            </td>
+        </tr>
+        <tr>
+            <th class="red">Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th class="blue">Sat</th>
+        </tr>
+    </table>
+    <table class="day-2">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <p>1<sub>13</sub></p>
+            </td>
+            <td>
+                <p>2<sub>14</sub></p>
+            </td>
+            <td>
+                <p class="blue">3
+                    <sub class="black">15</sub>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="red">4
+                    <sub class="black">16</sub>
+                </p>
+            </td>
+            <td>
+                <p>5<sub>17</sub></p>
+            </td>
+            <td>
+                <p>6<sub>18</sub></p>
+            </td>
+            <td>
+                <p>7<sub>19</sub></p>
+            </td>
+            <td>
+                <p>8<sub>20</sub></p>
+            </td>
+            <td>
+                <p>9<sub>21</sub></p>
+            </td>
+            <td>
+                <p class="blue">10
+                    <sub class="black">22</sub>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="red">11
+                    <sub class="black">23</sub>
+                </p>
+            </td>
+            <td>
+                <p>12<sub>24</sub></p>
+            </td>
+            <td>
+                <p>13<sub>25</sub></p>
+            </td>
+            <td>
+                <p>14<sub>26</sub></p>
+            </td>
+            <td>
+                <p>15<sub>27</sub></p>
+            </td>
+            <td>
+                <p>16<sub>28</sub></p>
+            </td>
+            <td>
+                <p class="blue">17
+                    <sub class="black">29</sub>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="red">18
+                    <sub class="black">1.9</sub>
+                </p>
+            </td>
+            <td>
+                <p>19<sub>2</sub></p>
+            </td>
+            <td>
+                <p>20<sub>3</sub></p>
+            </td>
+            <td>
+                <p>21<sub>4</sub></p>
+            </td>
+            <td>
+                <p>22<sub>5</sub></p>
+            </td>
+            <td>
+                <p>23<sub>6</sub></p>
+            </td>
+            <td>
+                <p class="blue">24
+                    <sub class="black">7</sub>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="red">25
+                    <sub class="black">8</sub>
+                </p>
+            </td>
+            <td>
+                <p>26<sub>9</sub></p>
+            </td>
+            <td>
+                <p>27<sub>10</sub></p>
+            </td>
+            <td>
+                <p>28<sub>11</sub></p>
+            </td>
+            <td>
+                <p>29<sub>12</sub></p>
+            </td>
+            <td>
+                <p>30<sub>13</sub></p>
+            </td>
+            <td>
+                <p class="blue">31
+                    <sub class="black">14</sub>
+                </p>
+            </td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>
