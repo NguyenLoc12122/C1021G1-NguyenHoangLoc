@@ -9,14 +9,7 @@
         let userName = prompt("Who's there",'');
 
         if(userName == "Admin"){
-
-        }else if (userName == 'Null'){
-            alert("Canceled");
-        }else {
-            alert("I don't know you");
-        }
-
-        let pass = prompt('Password?','');
+            let pass = prompt('Password?','');
             if(pass == "theMaster"){
                 alert('Welcome');
             }else if (pass == 'Null'){
@@ -24,6 +17,14 @@
             }else {
                 alert('Wrong Password');
             }
+
+        }else if (userName == 'Null'){
+            alert("Canceled");
+        }else {
+            alert("I don't know you");
+        }
+
+
 
     </script>
 
