@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th colspan="2"><input type="text" value="" id="inputa"></th>
+            <th colspan="2"><input type="text" value="" id="inputb"></th>
+        </tr>
+        <tr>
+            <th><input type="button" onclick="result1.value=add()" value="Addition(+)"></th>
+            <th><input type="button" onclick="result2.value=sub()" value="Subtraction(-)"> </th>
+            <th><input type="button" onclick="result3.value=mul()" value="Multiplication(X)"></th>
+            <th><input type="button" onclick="result4.value=div()" value="Division(/)"> </th>
+        </tr>
+        <tr>
+            <th>Result Division:</th>
+            <th>
+                <span id="result1"></span>
+                <span id="result2"></span>
+                <span id="result3"></span>
+                <span id="result4"></span>
+
+            </th>
+        </tr>
+    </table>
+    <script>
+        function add(){
+            let a =parseInt(document.getElementById("inputa").value);
+            let b =parseInt(document.getElementById("inputb").value);
+            let ab = a + b;
+            document.getElementById("result1").innerHTML= ab;
+        }
+        function sub() {
+            let a =parseInt(document.getElementById("inputa").value);
+            let b =parseInt(document.getElementById("inputb").value);
+            let ab = a - b;
+            document.getElementById("result2").innerHTML= ab;
+
+        }
+        function mul() {
+            let a =parseInt(document.getElementById("inputa").value);
+            let b =parseInt(document.getElementById("inputb").value);
+            let ab = a * b;
+            document.getElementById("result3").innerHTML= ab;
+
+        }
+        function div() {
+            let a =parseInt(document.getElementById("inputa").value);
+            let b =parseInt(document.getElementById("inputb").value);
+            let ab = a / b;
+            document.getElementById("result4").innerHTML= ab;
+        }
+    </script>
+</body>
