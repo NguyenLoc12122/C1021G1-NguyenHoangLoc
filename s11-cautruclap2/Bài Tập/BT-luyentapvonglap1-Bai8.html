@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Play" onclick="button1()">
+<script>
+    function button1() {
+        let numbers = parseInt(prompt("Nhập số dự đoán: "));
+        let random = Math.floor(Math.random() * numbers);
+        let dudoan = parseInt(prompt("Nhập số vào đây: "));
+        if (random == dudoan) {
+            alert("Chúc mừng bạn đã đoán đúng");
+        }else {
+            while (dudoan != random) {
+                alert("Sai rồi. ");
+                dudoan = prompt("Đoán lại đi.");
+            }
+        }
+        alert("Chúc mừng bạn đã đoán đúng");
+    }
+</script>
+
+</body>
+</html>
