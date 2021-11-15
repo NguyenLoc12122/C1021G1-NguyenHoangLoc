@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let goc = parseInt(prompt("so tien vay"));
+    let laiXuat = 0.12; // lai xuat 12%
+    let thang = parseInt(prompt("so thang se tra het no"));
+    let gocThang = goc/thang;
+    let lai ;
+    let tong;
+
+    for (let i = 1; i <= thang; i++){
+        lai = goc*laiXuat/thang;
+        tong = lai + gocThang;
+        goc= goc-gocThang;
+        document.writeln("số tiền phải trả trong thang thứ "+ i+" là :"+tong+"<br/>");
+    }
+</script>
+
+</body>
+</html>
