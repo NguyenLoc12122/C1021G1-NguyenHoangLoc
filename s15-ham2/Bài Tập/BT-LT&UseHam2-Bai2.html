@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+function sCircle(r) {
+   let s= r*r*Math.PI
+    return s;
+}
+function cCircle(r) {
+   let c= 2*r*Math.PI
+    return c;
+
+}
+let a=parseInt(prompt("Nhập bán kính hình tròn"))
+result=sCircle(a);
+result2=cCircle(a);
+document.write("Diện tích của hình tròn là:"+ result +"</br>");
+
+document.write('Chu vi của hình tròn là:'+ result2);
+
+</script>
+
+</body>
+</html>
