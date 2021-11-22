@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let Circle = function(radius) {
+    //
+    //     this.radius = radius;
+    //     this.getRadius = function() {
+    //         return radius;
+    //     }
+    //     this.getArea = function() {
+    //         return Math.PI * radius * radius;
+    //     }
+    //
+    // };
+    // let circle = new Circle(2);
+    // let radius = circle.getRadius(); // 2
+    //
+    // let area = circle.getArea(); // 12.566370614359172
+    // alert("radius: " + radius + "; area: " + area);
+    class CirCle{
+        constructor(radius) {
+            this.radius=radius;
+        }
+        getArea(){
+            return Math.PI*this.radius*this.radius;
+        }
+    }
+    let cirCle1=new CirCle(5);
+    document.write("Ban kinh cua hinh tron la :"+ cirCle1.radius +"</br>");
+    document.write("Dien tich cua hinh tron la :" + cirCle1.getArea());
+</script>
+
+</body>
+</html>

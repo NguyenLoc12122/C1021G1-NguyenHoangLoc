@@ -1,10 +1,32 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+<script>
+    function kiemTra(arr,kitu) {
+        let count=0
+        for (let i=0;i<arr.length;i++){
+            if (arr[i]===kitu){
+                count++;
+            }
+        }
+        if(count>0){
+            alert(count);
+        }else {
+            alert(-1);
+        }
+    }
+    let array2=[];
+    let doDai=prompt("Vui long nhap vao do dai");
+    for (let i=0;i<doDai;i++){
+        array2[i]=prompt("nhap vao ky tu");
+    }
+    let xxx=prompt("vui long nhap ky tu");
+    kiemTra(array2,xxx);
+</script>
 
 </body>
 </html>

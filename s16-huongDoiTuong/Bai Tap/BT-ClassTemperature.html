@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        constructor(c) {
+            this.c=c;
+        }
+        chuyenDoiF(){
+            this.f=this.c * 9/5 + 32;
+            if(this.c >-273){
+                return this.f;
+            }
+
+        }
+        chuyenDoiK(){
+            this.k=this.c+273.15;
+            return this.k;
+        }
+    }
+    let temO=new Temperature(-273);
+    document.write("nhiet do C la :"+temO.c+"</br>");
+    document.write("C => F  :"+temO.chuyenDoiF() +"</br>");
+    document.write("C=> K :"+temO.chuyenDoiK());
+</script>
+</body>
+</html>
