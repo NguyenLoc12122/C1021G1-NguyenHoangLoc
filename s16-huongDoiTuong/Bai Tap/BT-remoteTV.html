@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Remote {
+        constructor(code) {
+            this._code = code;
+        }
+
+
+        get code() {
+            return this._code;
+        }
+
+        set code(value) {
+            this._code = value;
+        }
+
+        switchChannel(name, tv) {
+            tv.changeTheChannel(name)
+
+        }
+
+        volume(tv) {
+            tv.volumeTV()
+        }
+
+        offTv(tv) {
+            tv.onOff()
+        }
+    }
+
+    class TiVi {
+        constructor(currentChannel, currentVolume, isOn) {
+            this._currentChannel = currentChannel;
+            this._currentVolume = currentVolume;
+            this._isOn = isOn;
+        }
+
+
+        get currentChannel() {
+            return this._currentChannel;
+        }
+
+        set currentChannel(value) {
+            this._currentChannel = value;
+        }
+
+        get currentVolume() {
+            return this._currentVolume;
+        }
+
+        set currentVolume(value) {
+            this._currentVolume = value;
+        }
+
+        get isOn() {
+            return this._isOn;
+        }
+
+        set isOn(value) {
+            this._isOn = value;
+        }
+
+        onOff() {
+            if (this.isOn) {
+                this.isOn = false
+                console.log('Tivi tắt')
+            } else {
+                this.isOn = true
+                console.log('Tivi bật')
+            }
+        }
+
+
+        changeTheChannel(name) {
+            this.currentChannel = name;
+            console.log('Chuyển qua kênh: ' + name)
+        }
+
+        volumeTV() {
+            this.currentVolume = this.currentVolume + 1
+            console.log(this.currentVolume)
+
+        }
+    }
+
+    let sonyRemote = new Remote('001')
+    let sony = new TiVi('vtv6', 30, false)
+    sony.onOff()
+    sony.changeTheChannel('vtv1')
+    sonyRemote.switchChannel('vtv6', sony)
+    sony.volumeTV()
+    sonyRemote.volume(sony)
+    sonyRemote.offTv(sony)
+
+</script>
+
+</body>
+</html>

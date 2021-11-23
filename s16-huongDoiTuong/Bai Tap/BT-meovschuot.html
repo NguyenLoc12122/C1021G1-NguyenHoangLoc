@@ -13,9 +13,48 @@
             this.speed=speed;
             this.status=status;
         }
+        growl(){
+            console.log(this.name+":Chít chít");
+        }
+
     }
-    let ratO=new Rat("jerry",2,10,"a");
+    class Cat{
+        constructor(name,weight,speed) {
+            this.name=name;
+            this.weight=weight;
+            this.speed=speed;
+        }
+        growl(){
+            console.log(this.name+":Meo, meo");
+        }
+        catchRat(ratObj){
+            console.log("----catch rat");
+            if (this.speed > ratObj.speed){
+                this.eatRat(ratObj);
+            }else {
+                console.log("nu ba ka chi");
+            }
+        }
+        eatRat(ratObj){
+            console.log("---Eat Rat");
+            if (ratObj.status==="song"){
+                // ratObj.status=="chet"
+                this.weight+=ratObj.weight;
+                console.log("good!khối lượng mèo :"+this.weight);
+            }else {
+                console.log("Hôi quá, Không ăn");
+            }
+        }
+    }
+    let ratO=new Rat("jerry",2,12,"song");
+    let catO=new Cat("Tom",4,15);
+    console.log(catO);
     console.log(ratO);
+    catO.growl();
+    ratO.growl();
+    catO.catchRat();
+
+
 </script>
 
 </body>
