@@ -7,41 +7,37 @@ public class DocSoThanhChu {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your number : ");
         int num = scanner.nextInt();
-        switch (num){
-            case 1 :
-                System.out.println("one");
-                break;
-            case 2 :
-                System.out.println("two");
-                break;
-            case 3 :
-                System.out.println("three");
-                break;
-            case 4 :
-                System.out.println("four");
-                break;
-            case 5 :
-                System.out.println("five");
-                break;
-            case 6 :
-                System.out.println("six");
-                break;
-            case 7 :
-                System.out.println("seven");
-                break;
-            case 8 :
-                System.out.println("eight");
-                break;
-            case 9 :
-                System.out.println("nine");
-                break;
-            case 10:
-                System.out.println("ten");
-                break;
-            default:
-                System.out.println("out of ability");
+        String string[] = {"không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín"};
+        int number [] = {0,1,2,3,4,5,6,7,8,9};
+        for (int i = 0; i < number.length; i++) {
+            if (num == number[i]) {
+                System.out.println(string[i]);
+            } else if (num < 20) {
+                if (num % 10 == 0) {
+                    System.out.println("mười ");
+                    break;
+                } else if (num % 10 == number[i]) {
+                    System.out.println("mười " + string[i]);
+                    break;
+                }
+            } else if (num < 100) {
+                if (num / 10 == number[i] && num % 10 == 0) {
+                    System.out.println(string[i] + " mươi");
+                } else if (num / 10 == number[i] && num % 10 != 0) {
+                    System.out.println(string[num / 10] + " mươi " + string[num % 10]);
+                }
+            } else if (num < 1000) {
+                if (num / 100 == number[i] && (num / 10) % 10 == 0 && num % 10 == 0) {
+                    System.out.println(string[num / 100] + " trăm");
+                } else if (num / 100 == number[i] && (num / 10) % 10 != 0 && num % 10 == 0) {
+                    System.out.println(string[num / 100] + " trăm " + string[(num / 10) % 10] + " mươi ");
+                } else if (num / 100 == number[i] && (num / 10) % 10 == 0 && num % 10 != 0) {
+                    System.out.println(string[num / 100] + " trăm " + " lẻ " + string[num % 10]);
+                } else if (num / 100 == number[i]) {
+                    System.out.println(string[num / 100] + " trăm " + string[(num / 10) % 10] + " mươi " + string[num % 10]);
+                }
+            }
         }
-
 
     }
 }
