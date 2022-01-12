@@ -22,3 +22,7 @@ id int auto_increment,
 `name` varchar(40),
 primary key(id)
 );
+insert into student
+values (1,'loc',31,'Viet Nam'),(2,'hoang',25,'Viet Nam');
+insert into class
+values ('loc');
