@@ -1,34 +1,27 @@
+
 create database quan_ly_ban_hang;
 use quan_ly_ban_hang;
-
-
-create table cutomers(
-	c_id int primary key , 
-    c_name varchar (50),
-    c_age int 
-    
+create table customer(
+customer_id int primary key,
+customer_name varchar(50),
+customer_age int
 );
-create table Oders(
-	o_iD int primary key ,
-    c_iD int ,
-    o_date date , 
-    o_total_price int,
-    FOREIGN KEY (c_iD) REFERENCES cutomers(c_iD)
-    );
-    
- 
- create table product(
-	p_id int primary key , 
-    p_name varchar(50),
-    p_price varchar(50)
+create table `order`(
+order_id int primary key,
+customer_id int,
+foreign key (customer_id) references customer(customer_id),
+order_date date,
+order_total_price int
 );
-
-
-create table oders_detail(
-	o_id int , 
-    p_id int , 
-    od_qty int ,
-    primary key  (o_id , p_id),
-    FOREIGN KEY (o_id) REFERENCES Oders(o_id),
-    FOREIGN KEY (p_id) REFERENCES product(p_id)
+create table product(
+product_id int primary key,
+product_name varchar(50),
+product_price int
+);
+create table order_detail(
+order_id int,
+foreign key (order_id) references `order`(order_id),
+product_id int,
+foreign key (product_id) references product (product_id),
+order_qty int
 );
