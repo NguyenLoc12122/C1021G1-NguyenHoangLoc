@@ -64,7 +64,7 @@ public class ProductServlet extends HttpServlet {
 
                 break;
             default:
-
+                listProduct(request,response);
                 break;
         }
     }

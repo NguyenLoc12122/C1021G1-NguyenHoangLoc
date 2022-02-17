@@ -18,6 +18,17 @@
     <h2>
         <a href="/users?action=create">Add New User</a>
     </h2>
+    <form action>
+        <input type="hidden" name="action" value="search">
+        <label>Name User: </label>
+        <input type="text" name="keyword"  value="${search}">
+        <button type="submit">Search</button>
+
+    </form>
+    <form  action="/users" method="get">
+        <input type="hidden" name="action" value="sort">
+        <button type="submit">Sort</button>
+    </form>
 </center>
 <div align="center">
     <table border="1" cellpadding="5">
